@@ -81,7 +81,7 @@ class DiskStore
     end
   end
 
-private
+
 
   # These methods were borrowed mostly from ActiveSupport::Cache::FileStore
 
@@ -101,6 +101,8 @@ private
 
     File.join(@root_path, DIR_FORMATTER % dir_1, DIR_FORMATTER % dir_2, *fname_paths)
   end
+
+private
 
   def validate_file!(file_path, md5)
     real_md5 = Digest::MD5.file(file_path).hexdigest
