@@ -14,7 +14,6 @@ class DiskStore
     path ||= "."
     @root_path = File.expand_path path
     @options = opts
-    @reaper = Reaper.spawn_for(@root_path, @options)
   end
 
   def read(key, md5 = nil)
